@@ -22,7 +22,8 @@ packer.startup(function(use)
     local path = string.format('plugins/%s', file)
     local _, module = pcall(require, path)
     local table = type(module) == 'table' and module or {}
-    return use({name, unpack(table)})
+    table[1] = name
+    return use(table)
   end
 
   -- Plugins list
