@@ -29,6 +29,7 @@ packer.startup(function(use)
   -- Plugins list
   reuse 'wbthomason/packer.nvim'
   reuse 'folke/tokyonight.nvim'
+  reuse 'nvim-treesitter/nvim-treesitter'
 
   if just_installed then
     packer.sync()
