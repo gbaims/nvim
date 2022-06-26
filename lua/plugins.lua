@@ -28,7 +28,22 @@ packer.startup(function(use)
 
   -- Plugins list
   reuse 'wbthomason/packer.nvim'
+
+  -- Colorscheme
   reuse 'folke/tokyonight.nvim'
+
+  -- Completion
+  reuse 'hrsh7th/nvim-cmp'
+  reuse 'hrsh7th/cmp-buffer'
+  reuse 'hrsh7th/cmp-path'
+  reuse 'hrsh7th/cmp-cmdline'
+  reuse 'hrsh7th/cmp-nvim-lua'
+  reuse 'hrsh7th/cmp-vsnip'
+  reuse 'hrsh7th/vim-vsnip'
+  reuse 'rafamadriz/friendly-snippets'
+  reuse 'onsails/lspkind.nvim'
+
+  -- Syntax Highlight
   reuse 'nvim-treesitter/nvim-treesitter'
 
   if just_installed then
