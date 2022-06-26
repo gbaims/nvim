@@ -43,6 +43,11 @@ packer.startup(function(use)
   reuse 'rafamadriz/friendly-snippets'
   reuse 'onsails/lspkind.nvim'
 
+  -- Language Server Protocol
+  reuse 'williamboman/nvim-lsp-installer'
+  reuse 'hrsh7th/cmp-nvim-lsp'
+  reuse 'neovim/nvim-lspconfig'
+
   -- Syntax Highlight
   reuse 'nvim-treesitter/nvim-treesitter'
 
