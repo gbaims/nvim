@@ -1,3 +1,3 @@
-vim.opt.relativenumber = true
+require 'options'
 require 'mappings'
 require 'plugins'
