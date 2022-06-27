@@ -10,7 +10,6 @@ end
 -- Regenerate compiled loader file when saving plugin file or configuration
 local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile> | PackerSync', group = packer_group, pattern = 'plugins.lua' })
-vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile>', group = packer_group, pattern = '**/plugins/*.lua' })
 
 -- Initialize and configure packer
 local packer = require 'packer'
