@@ -31,6 +31,9 @@ packer.startup(function(use)
   -- Colorscheme
   reuse 'folke/tokyonight.nvim'
 
+  -- Syntax Highlight
+  reuse 'nvim-treesitter/nvim-treesitter'
+
   -- Completion
   reuse 'hrsh7th/nvim-cmp'
   reuse 'hrsh7th/cmp-buffer'
@@ -46,9 +49,6 @@ packer.startup(function(use)
   reuse 'williamboman/nvim-lsp-installer'
   reuse 'hrsh7th/cmp-nvim-lsp'
   reuse 'neovim/nvim-lspconfig'
-
-  -- Syntax Highlight
-  reuse 'nvim-treesitter/nvim-treesitter'
 
   if just_installed then
     packer.sync()
