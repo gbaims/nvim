@@ -7,10 +7,6 @@ if empty_path then
   vim.cmd 'packadd packer.nvim'
 end
 
--- Regenerate compiled loader file when saving plugin file or configuration
-local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
-vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile> | PackerSync', group = packer_group, pattern = 'plugins.lua' })
-
 -- Initialize and configure packer
 local packer = require 'packer'
 packer.init { display = { open_fn = function() return require('packer.util').float { border = 'rounded' } end }}
