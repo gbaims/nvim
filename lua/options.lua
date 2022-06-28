@@ -24,6 +24,12 @@ o.list = true                   -- Show invisible chars
 o.listchars = 'tab:»·,trail:·'  -- Set listchars for tabs and trailing spaces
 o.wrap = false                  -- Don't wrap lines
 
+-- Search
+o.ignorecase = true             -- Searches are case insensitive...
+o.smartcase = true              -- ... unless they contain at least one capital letter
+o.incsearch = true              -- Highlight next ocurrence while typing ...
+o.hlsearch = true               -- ... and highlighting all ocurrences
+
 -- History, cursor and rulers
 o.history = 50                  -- Just remember last 50 commands
 o.laststatus = 2                -- Always display the status line

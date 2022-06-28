@@ -4,6 +4,8 @@ local map = vim.keymap.set
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.g.mapleader = ' '
 
+-- Remove search highlight
+map('n', '<C-N>', ':noh<CR>', { silent = true })
 
 local M = {}
 
