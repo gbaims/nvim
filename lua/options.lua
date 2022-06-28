@@ -6,6 +6,12 @@ vim.cmd 'syntax on'
 
 local o = vim.opt
 
+-- Dirty files
+o.autoread = true               -- Reload files modified outside automatically
+o.autowriteall = true           -- Save files before switching buffers automatically
+o.backup = false                -- Don't backup
+o.swapfile = false              -- Don't use swap files .swp
+o.writebackup = false           -- Write file in place
 
 -- Tabs and whitespaces
 o.tabstop = 2                   -- Specifies the width of tab character
