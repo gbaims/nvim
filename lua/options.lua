@@ -38,5 +38,5 @@ o.number = true                 -- ... but show current line number
 o.ruler = true                  -- Show the cursor position all the time
 o.cursorline = true             -- Highlight current cursor line
 o.scrolloff = 8                 -- Start scrolling before reaches the end
-o.signcolumn = 'auto'           -- Extra column for linting, lsp or git signs if necessary
+o.signcolumn = 'yes'            -- Extra column for linting, lsp or git signs if necessary
 o.colorcolumn = '100'           -- Avoid exceeding that much columns
