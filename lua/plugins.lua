@@ -25,7 +25,9 @@ packer.startup(function(use)
   reuse 'wbthomason/packer.nvim'
 
   -- Colorscheme
-  reuse 'folke/tokyonight.nvim'
+  --reuse 'folke/tokyonight.nvim'
+  --reuse 'mcchrish/zenbones.nvim'
+  reuse 'shaunsingh/nord.nvim'
 
   -- Syntax Highlight
   reuse 'nvim-treesitter/nvim-treesitter'
