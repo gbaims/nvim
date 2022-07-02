@@ -47,6 +47,7 @@ packer.startup(function(use)
   reuse 'williamboman/nvim-lsp-installer'
   reuse 'hrsh7th/cmp-nvim-lsp'
   reuse 'neovim/nvim-lspconfig'
+  reuse 'jose-elias-alvarez/null-ls.nvim'
 
   if JUST_INSTALLED then
     packer.sync()

@@ -23,7 +23,7 @@ lspconfig.sumneko_lua.setup {
   }
 }
 
--- Psalm PHP LSP
+-- Psalm PHP
 lspconfig.psalm.setup {
   on_attach = on_attach_lsp,
   capabilities = capabilities
