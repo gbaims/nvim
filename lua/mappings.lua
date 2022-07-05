@@ -9,7 +9,7 @@ map('n', '<C-N>', ':noh<CR>', { silent = true })
 
 local M = {}
 
-M.on_attach_lsp = function(_, bufnr)
+M.map_lsp = function(_, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
