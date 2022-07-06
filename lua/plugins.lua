@@ -56,6 +56,9 @@ packer.startup(function(use)
   reuse 'tpope/vim-surround'
   reuse 'tpope/vim-commentary'
 
+  -- Terminal
+  reuse 'akinsho/toggleterm.nvim'
+
   if JUST_INSTALLED then
     packer.sync()
   end
