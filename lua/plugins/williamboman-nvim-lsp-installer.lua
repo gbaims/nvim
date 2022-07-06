@@ -1,6 +1,8 @@
 local ok, lsp_installer = pcall(require, 'nvim-lsp-installer')
 if not ok then return end
 
+local settings = require('settings')
+
 local servers = require 'nvim-lsp-installer.servers'
 local server = require 'nvim-lsp-installer.server'
 local composer = require 'nvim-lsp-installer.core.managers.composer'
@@ -24,6 +26,6 @@ lsp_installer.setup {
     php_cs_fixer_name
   },
   ui = {
-    border = 'rounded'
+    border = settings.border
   }
 }

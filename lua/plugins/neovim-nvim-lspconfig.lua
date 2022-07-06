@@ -1,6 +1,25 @@
 local ok_lspconfig, lspconfig = pcall(require, 'lspconfig')
 if not ok_lspconfig then return end
 
+local settings = require('settings')
+
+-- LSP Borders
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = opts.border or settings.border
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
+
+local lspconfig_window = require("lspconfig.ui.windows")
+local old_defaults = lspconfig_window.default_opts
+function lspconfig_window.default_opts(opts)
+  local win_opts = old_defaults(opts)
+  win_opts.border = settings.border
+  return win_opts
+end
+
+-- LSP Configurations
 local mappings = require('mappings')
 local function on_attach(client, bufnr)
   mappings.map_lsp(client, bufnr)

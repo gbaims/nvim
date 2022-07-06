@@ -1,3 +1,5 @@
+local settings = require('settings')
+
 -- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
@@ -9,7 +11,7 @@ end
 
 -- Initialize and configure packer
 local packer = require 'packer'
-packer.init { display = { open_fn = function() return require('packer.util').float { border = 'rounded' } end } }
+packer.init { display = { open_fn = function() return require('packer.util').float { border = settings.border } end } }
 packer.startup(function(use)
   -- Use plugin and require configuration
   local function reuse(name)
