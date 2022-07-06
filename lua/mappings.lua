@@ -30,6 +30,9 @@ M.map_lsp = function(_, bufnr)
   map('n', '<Leader>ca', lsp.code_action, bufopts)
   map('n', 'gr', lsp.references, bufopts)
   map('n', '<Leader>f', lsp.formatting, bufopts)
+  map('n', '[d', vim.diagnostic.goto_prev, bufopts)
+  map('n', ']d', vim.diagnostic.goto_next, bufopts)
+  map('n', '~d', vim.diagnostic.setloclist, bufopts)
 end
 
 return M
