@@ -51,6 +51,9 @@ packer.startup(function(use)
   reuse 'neovim/nvim-lspconfig'
   reuse 'jose-elias-alvarez/null-ls.nvim'
 
+  -- Autopairs
+  reuse 'windwp/nvim-autopairs'
+
   if JUST_INSTALLED then
     packer.sync()
   end
