@@ -5,6 +5,17 @@ map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.g.mapleader = ' '
 
 map('n', '<C-S>', ':w<CR>') -- Save document
+-- Move windows
+map('n', '<A-h>', '<C-w>h')
+map('n', '<A-j>', '<C-w>j')
+map('n', '<A-k>', '<C-w>k')
+map('n', '<A-l>', '<C-w>l')
+
+-- Resize windows
+map('n', '<A-.>', ':vertical resize +3<CR>')
+map('n', '<A-,>', ':vertical resize -3<CR>')
+map('n', '<A-=>', ':resize +3<CR>')
+map('n', '<A-->', ':resize -3<CR>')
 
 local M = {}
 
