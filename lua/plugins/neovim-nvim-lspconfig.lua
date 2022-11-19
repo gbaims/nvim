@@ -32,16 +32,16 @@ local function on_attach(client, bufnr)
 end
 
 -- nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+local additional_capabilities = nil
 local ok_cmp_nvim_lsp, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 if ok_cmp_nvim_lsp then
-  capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+  additional_capabilities = cmp_nvim_lsp.default_capabilities()
 end
 
 -- Lua LSP
 lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
+  capabilities = additional_capabilities,
   settings = {
     Lua = {
       diagnostics = { globals = { 'vim' } },
@@ -54,18 +54,18 @@ lspconfig.sumneko_lua.setup {
 -- Psalm PHP
 lspconfig.psalm.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = additional_capabilities
 }
 
 -- Rust Analyzer
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = additional_capabilities
 }
 
 -- Deno
 lspconfig.denols.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
+  capabilities = additional_capabilities,
   root_dir = lspconfig.util.root_pattern('deno.json')
 }
