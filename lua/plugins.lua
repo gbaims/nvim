@@ -57,6 +57,9 @@ packer.startup(function(use)
   -- Terminal
   reuse 'akinsho/toggleterm.nvim'
 
+  -- Telescope
+  reuse 'nvim-telescope/telescope.nvim'
+
   if JUST_INSTALLED then
     packer.sync()
   end

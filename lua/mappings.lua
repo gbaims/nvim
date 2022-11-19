@@ -41,10 +41,15 @@ M.map_lsp = function(_, bufnr)
   map('n', '<Leader>D', lsp.type_definition, bufopts)
   map('n', '<Leader>rn', lsp.rename, bufopts)
   map('n', '<Leader>ca', lsp.code_action, bufopts)
-  map('n', '<Leader>f', lsp.formatting, bufopts)
   map('n', '[d', vim.diagnostic.goto_prev, bufopts)
   map('n', ']d', vim.diagnostic.goto_next, bufopts)
   map('n', '~d', vim.diagnostic.setloclist, bufopts)
+end
+
+M.map_telescope = function()
+  map('n', '<Leader>f', ':Telescope find_files<CR>')
+  map('n', '<Leader>g', ':Telescope live_grep<CR>')
+  map('n', '<Leader>k', ':Telescope keymaps<CR>')
 end
 
 return M
