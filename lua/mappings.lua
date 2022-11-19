@@ -4,7 +4,6 @@ local map = vim.keymap.set
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.g.mapleader = ' '
 
-map('n', '<C-S>', ':w<CR>') -- Save document
 -- Move windows
 map('n', '<A-h>', '<C-w>h')
 map('n', '<A-j>', '<C-w>j')
@@ -16,6 +15,9 @@ map('n', '<A-.>', ':vertical resize +3<CR>')
 map('n', '<A-,>', ':vertical resize -3<CR>')
 map('n', '<A-=>', ':resize +3<CR>')
 map('n', '<A-->', ':resize -3<CR>')
+
+map('n', '<C-s>', ':write<CR>') -- Save document
+map('n', '<C-c>', ':bwipeout<CR>') -- Delete buffer
 
 local M = {}
 
