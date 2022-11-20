@@ -44,7 +44,8 @@ packer.startup(function(use)
   reuse 'onsails/lspkind.nvim'
 
   -- Language Server Protocol
-  reuse 'williamboman/nvim-lsp-installer'
+  reuse 'williamboman/mason.nvim'
+  reuse 'williamboman/mason-lspconfig.nvim'
   reuse 'hrsh7th/cmp-nvim-lsp'
   reuse 'neovim/nvim-lspconfig'
   reuse 'jose-elias-alvarez/null-ls.nvim'
