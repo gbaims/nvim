@@ -11,13 +11,7 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
-local lspconfig_window = require("lspconfig.ui.windows")
-local old_defaults = lspconfig_window.default_opts
-function lspconfig_window.default_opts(opts)
-  local win_opts = old_defaults(opts)
-  win_opts.border = settings.border
-  return win_opts
-end
+require('lspconfig.ui.windows').default_options.border = settings.border
 
 -- LSP Configurations
 local mappings = require('mappings')
