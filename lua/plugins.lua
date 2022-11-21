@@ -58,9 +58,11 @@ packer.startup(function(use)
   -- Terminal
   reuse 'akinsho/toggleterm.nvim'
 
-  -- File Explorer
+  -- File Explorer and UI
   reuse 'nvim-tree/nvim-tree.lua'
   reuse 'nvim-telescope/telescope.nvim'
+  reuse 'nvim-lualine/lualine.nvim'
+  reuse 'lewis6991/gitsigns.nvim'
 
   if JUST_INSTALLED then
     packer.sync()
