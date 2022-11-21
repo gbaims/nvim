@@ -58,7 +58,8 @@ packer.startup(function(use)
   -- Terminal
   reuse 'akinsho/toggleterm.nvim'
 
-  -- Telescope
+  -- File Explorer
+  reuse 'nvim-tree/nvim-tree.lua'
   reuse 'nvim-telescope/telescope.nvim'
 
   if JUST_INSTALLED then

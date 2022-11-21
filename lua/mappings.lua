@@ -52,4 +52,8 @@ M.map_telescope = function()
   map('n', '<Leader>k', ':Telescope keymaps<CR>')
 end
 
+M.map_nvim_tree = function()
+  map('n', '<Leader>e', ':NvimTreeToggle<CR>')
+end
+
 return M
